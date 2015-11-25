@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125222107) do
+ActiveRecord::Schema.define(version: 20151125223653) do
+
+  create_table "conversations", force: true do |t|
+    t.integer  "sender_id"
+    t.string   "recipient_id"
+    t.string   "integer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "conversations", ["recipient_id"], name: "index_conversations_on_recipient_id"
+  add_index "conversations", ["sender_id"], name: "index_conversations_on_sender_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
