@@ -11,7 +11,13 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
+
+# Authentication
 gem 'devise'
+
+# Chat functionality via Joseph Ndungu
+gem 'private_pub'
+gem 'thin'
 
 group :development, :test do
   gem 'sqlite3'
