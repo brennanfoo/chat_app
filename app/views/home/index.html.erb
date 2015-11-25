@@ -1,0 +1,18 @@
+<h1>Listing users</h1>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Registered users</div>
+  <!-- Table -->
+  <table class="table">
+  <tr>
+    <td>#</td>
+    <td>Name</td>
+  </tr>
+    <% @users.each do |u| %>
+    <tr>
+      <td><%= u.id %></td>
+      <td><%= u.email %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
